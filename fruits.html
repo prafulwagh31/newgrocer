@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALP Grocery - Bootstrap 5 Grocery Template</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/icons/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="assets/vendor/select2/css/select2-bootstrap.css">
+    <link rel="stylesheet" href="assets/vendor/select2/css/select2.min.css">
+    <link rel="stylesheet" href="assets/vendor/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="assets/vendor/owl-carousel/owl.theme.css">
+</head>
+<body class="groc-body">
+    <!------Header------>
+      <header style="margin-bottom: -11px;">
+         <nav class="navbar navbar-light navbar-expand-lg main-navs bg-faded osahan-menu">
+            <div class="container-fluid">
+               <a class="navbar-brand" href="index-2.html"> <img src="assets/img/logo.png" alt="logo"> </a>
+               <a class="location-top" href="#"><i class="mdi mdi-map-marker-circle" aria-hidden="true"></i> New York</a>
+               <button class="navbar-toggler navbar-toggler-white" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" style="margin-right: 0px;">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="navbar-collapse" id="navbarNavDropdown">
+                  <div class="navbar-nav mr-auto mt-2 mt-lg-0 margin-auto top-categories-search-main">
+                     <div class="top-categories-search">
+                           <div class="input-group" style="margin-top: 20px; width: 350px; margin-left: 38px;">
+                              <input class="form-control" placeholder="Search products in Your City" aria-label="Search products in Your City" type="text">
+                              <span class="input-group-btn">
+                              <button class="btn btn-secondary" type="button"><i class="mdi mdi-file-find"></i> Search</button>
+                              </span>
+                           </div>
+                     </div>
+                  </div>
+                  <div class="my-2 my-lg-0">
+                     <ul class="list-inline main-nav-right">
+                        <li class="list-inline-item">
+                           <a href="#" data-target="#bd-example-modal" data-toggle="modal" class="btn btn-primary" style="border-color: #1c2224;
+                           background-color: #1c2224;"><i class="mdi mdi-account-circle"></i> Login / Sign Up</a>
+                        </li>
+                        <li class="list-inline-item cart-btn">
+                           <a href="#" data-toggle="offcanvas" class="btn btn-primary border-none" style="border-color: #1c2224;
+                           background-color: #1c2224;"><i class="mdi mdi-cart"></i> My Cart <small class="cart-value">5</small></a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </nav>
+      </header>
+      <nav class="navbar navbar-expand-lg navbar-light osahan-menu-2 pad-none-mobile">
+            <div class="container-fluid">
+               <div class="collapse navbar-collapse" id="navbarText">
+                  <ul class="navbar-nav mr-auto mt-2 mt-lg-0 margin-auto">
+                     <li class="nav-item">
+                        <a href="#" class="nav-link">Home</a>
+                     </li>
+                     <li class="nav-item">
+                        <a href="#" class="nav-link">About Us</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">Fruits & Vegetables</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">Grocery & Staples</a>
+                     </li>
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Shop
+                        </a>
+                        <div class="dropdown-menu">
+                           <a class="dropdown-item" href="#"><i class="mdi mdi-chevron-right" aria-hidden="true"></i> Product Grid</a>
+                           <a class="dropdown-item" href="#"><i class="mdi mdi-chevron-right" aria-hidden="true"></i> Product Details</a>
+                           <a class="dropdown-item" href="#"><i class="mdi mdi-chevron-right" aria-hidden="true"></i> Cart</a>
+                           <a class="dropdown-item" href="#"><i class="mdi mdi-chevron-right" aria-hidden="true"></i> My Account</a>
+                        </div>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">FAQ</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+      </nav>
+   
+     <!------Header------>
+
+     <section class="pt-3 pb-3 page-info section-padding border-bottom bg-white">
+        <div class="container">
+           <div class="row">
+              <div class="col-md-12">
+                 <a href="#"><strong><span class="mdi mdi-home"></span> Home</strong></a> <span class="mdi mdi-chevron-right"></span> <a href="#">Shop</a>
+              </div>
+           </div>
+        </div>
+     </section>
+     
+     <!------Main Section------>
+     <section class="shop-list section-padding">
+        <div class="container">
+           <div class="row">
+              <div class="col-md-3">
+                 <div class="shop-filters">
+                    <div id="accordion">
+                       <div class="card">
+                          <div class="card-header" id="headingOne">
+                             <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Fruits <span class="mdi mdi-chevron-down float-right"></span>
+                                </button>
+                             </h5>
+                          </div>
+                          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                             <div class="card-body">
+                                <div class="list-group">
+                                   <a href="#" class="list-group-item list-group-item-action active">
+                                   All Fruits
+                                   </a>
+                                   <a href="#" class="list-group-item list-group-item-action"><span class="mdi mdi-chevron-right"></span> Imported Fruits</a>
+                                   <a href="#" class="list-group-item list-group-item-action"><span class="mdi mdi-chevron-right"></span> Seasonal Fruits</a>
+                                   <a href="#" class="list-group-item list-group-item-action"><span class="mdi mdi-chevron-right"></span> Citrus</a>
+                                   <a href="#" class="list-group-item list-group-item-action"><span class="mdi mdi-chevron-right"></span> Cut Fresh & Herbs</a>
+                                   <a href="#" class="list-group-item list-group-item-action"><span class="mdi mdi-chevron-right"></span> Imported Fruits</a>
+                                   <a href="#" class="list-group-item list-group-item-action"><span class="mdi mdi-chevron-right"></span> Seasonal Fruits</a>
+                                   <a href="#" class="list-group-item list-group-item-action"><span class="mdi mdi-chevron-right"></span> Citrus</a>
+                                   <a href="#" class="list-group-item list-group-item-action"><span class="mdi mdi-chevron-right"></span> Cut Fresh & Herbs</a>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                       <div class="card">
+                          <div class="card-header" id="headingTwo">
+                             <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Vegetables <span class="mdi mdi-chevron-down float-right"></span>
+                                </button>
+                             </h5>
+                          </div>
+                          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                             <div class="card-body">
+                                <div class="list-group">
+                                   <a href="#" class="list-group-item list-group-item-action">All Fruits</a>
+                                   <a href="#" class="list-group-item list-group-item-action">Imported Fruits</a>
+                                   <a href="#" class="list-group-item list-group-item-action">Seasonal Fruits</a>
+                                   <a href="#" class="list-group-item list-group-item-action">Citrus</a>
+                                   <a href="#" class="list-group-item list-group-item-action disabled">Cut Fresh & Herbs</a>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                       <div class="card">
+                          <div class="card-header" id="headingThree">
+                             <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Mangoes <span class="mdi mdi-chevron-down float-right"></span>
+                                </button>
+                             </h5>
+                          </div>
+                          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                             <div class="card-body">
+                                <div class="list-group">
+                                   <a href="#" class="list-group-item list-group-item-action">All Fruits</a>
+                                   <a href="#" class="list-group-item list-group-item-action">Imported Fruits</a>
+                                   <a href="#" class="list-group-item list-group-item-action">Seasonal Fruits</a>
+                                   <a href="#" class="list-group-item list-group-item-action">Citrus</a>
+                                   <a href="#" class="list-group-item list-group-item-action disabled">Cut Fresh & Herbs</a>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                       <div class="card">
+                          <div class="card-header" id="headingThree">
+                             <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+                                Imported Fruits <span class="mdi mdi-chevron-down float-right"></span>
+                                </button>
+                             </h5>
+                          </div>
+                          <div id="collapsefour" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                             <div class="card-body">
+                                <div class="list-group">
+                                   <a href="#" class="list-group-item list-group-item-action">All Fruits</a>
+                                   <a href="#" class="list-group-item list-group-item-action">Imported Fruits</a>
+                                   <a href="#" class="list-group-item list-group-item-action">Seasonal Fruits</a>
+                                   <a href="#" class="list-group-item list-group-item-action">Citrus</a>
+                                   <a href="#" class="list-group-item list-group-item-action disabled">Cut Fresh & Herbs</a>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+                 <br><br>
+                 <div class="widget grocery widget_price_filter">
+                    <h3 class="widget-title h-title mb-30">Filter by Price</h3>
+                    <form action="#" method="get">
+                        <div class="price_slider_wrapper">
+                            <div class="price_slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+                                <div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 0%; width: 100%;"></div>
+                                <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;"></span>
+                             </div>
+                             <div class="price_slider_amount" data-step="10">
+                                <input type="text" id="min_price" name="min_price" value="0" data-min="0" placeholder="Min price" style="display: none;">
+                                <input type="text" id="max_price" name="max_price" value="40" data-max="40" placeholder="Max price" style="display: none;">
+                                <button type="submit" class="button">Filter</button>
+                                <div class="price_label"> Price: <span class="from">£0</span> — <span class="to">£40</span></div>
+                                <div class="clear"></div>
+                             </div>
+                        </div>
+                    </form>
+                 </div>
+              </div>
+              <div class="col-md-9">
+                 <a href="#"><img class="img-fluid mb-3" src="assets/img/shop.jpg" alt=""></a>
+                 <div class="shop-head">
+                    <!--  -->
+                    <div class="btn-group float-right mt-2">
+                       <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-top: -13px;">
+                       Sort by Products &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       </button>
+                       <div class="dropdown-menu dropdown-menu-right">
+                          <a class="dropdown-item" href="#">Relevance</a>
+                          <a class="dropdown-item" href="#">Price (Low to High)</a>
+                          <a class="dropdown-item" href="#">Price (High to Low)</a>
+                          <a class="dropdown-item" href="#">Discount (High to Low)</a>
+                          <a class="dropdown-item" href="#">Name (A to Z)</a>
+                       </div>
+                    </div>
+                    <h5 class="mb-3">Fruits</h5>
+                 </div>
+                 <div class="row no-gutters">
+                    <div class="col-md-4">
+                       <div class="product">
+                          <a href="single.html">
+                             <div class="product-header">
+                                <span class="badge badge-success">50% OFF</span>
+                                <img class="img-fluid" src="assets/img/item/1.jpg" alt="">
+                                <span class="veg text-success mdi mdi-circle"></span>
+                             </div>
+                             <div class="product-body">
+                                <h5>Product Title Here</h5>
+                                <h6><strong><span class="mdi mdi-approval"></span> Available in</strong> - 500 gm</h6>
+                             </div>
+                             <div class="product-footer">
+                                <button type="button" class="btn btn-secondary btn-sm float-right"><i class="mdi mdi-cart-outline"></i> Add To Cart</button>
+                                <p class="offer-price mb-0">$450.99 <i class="mdi mdi-tag-outline"></i><br><span class="regular-price">$800.99</span></p>
+                             </div>
+                          </a>
+                       </div>
+                    </div>
+                    <div class="col-md-4">
+                       <div class="product">
+                          <a href="single.html">
+                             <div class="product-header">
+                                <span class="badge badge-success">50% OFF</span>
+                                <img class="img-fluid" src="assets/img/item/2.jpg" alt="">
+                                <span class="veg text-success mdi mdi-circle"></span>
+                             </div>
+                             <div class="product-body">
+                                <h5>Product Title Here</h5>
+                                <h6><strong><span class="mdi mdi-approval"></span> Available in</strong> - 500 gm</h6>
+                             </div>
+                             <div class="product-footer">
+                                <button type="button" class="btn btn-secondary btn-sm float-right"><i class="mdi mdi-cart-outline"></i> Add To Cart</button>
+                                <p class="offer-price mb-0">$450.99 <i class="mdi mdi-tag-outline"></i><br><span class="regular-price">$800.99</span></p>
+                             </div>
+                          </a>
+                       </div>
+                    </div>
+                    <div class="col-md-4">
+                       <div class="product">
+                          <a href="single.html">
+                             <div class="product-header">
+                                <span class="badge badge-success">50% OFF</span>
+                                <img class="img-fluid" src="assets/img/item/3.jpg" alt="">
+                                <span class="veg text-success mdi mdi-circle"></span>
+                             </div>
+                             <div class="product-body">
+                                <h5>Product Title Here</h5>
+                                <h6><strong><span class="mdi mdi-approval"></span> Available in</strong> - 500 gm</h6>
+                             </div>
+                             <div class="product-footer">
+                                <button type="button" class="btn btn-secondary btn-sm float-right"><i class="mdi mdi-cart-outline"></i> Add To Cart</button>
+                                <p class="offer-price mb-0">$450.99 <i class="mdi mdi-tag-outline"></i><br><span class="regular-price">$800.99</span></p>
+                             </div>
+                          </a>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="row no-gutters">
+                    <div class="col-md-4">
+                       <div class="product">
+                          <a href="single.html">
+                             <div class="product-header">
+                                <span class="badge badge-success">50% OFF</span>
+                                <img class="img-fluid" src="assets/img/item/4.jpg" alt="">
+                                <span class="veg text-success mdi mdi-circle"></span>
+                             </div>
+                             <div class="product-body">
+                                <h5>Product Title Here</h5>
+                                <h6><strong><span class="mdi mdi-approval"></span> Available in</strong> - 500 gm</h6>
+                             </div>
+                             <div class="product-footer">
+                                <button type="button" class="btn btn-secondary btn-sm float-right"><i class="mdi mdi-cart-outline"></i> Add To Cart</button>
+                                <p class="offer-price mb-0">$450.99 <i class="mdi mdi-tag-outline"></i><br><span class="regular-price">$800.99</span></p>
+                             </div>
+                          </a>
+                       </div>
+                    </div>
+                    <div class="col-md-4">
+                       <div class="product">
+                          <a href="single.html">
+                             <div class="product-header">
+                                <span class="badge badge-success">50% OFF</span>
+                                <img class="img-fluid" src="assets/img/item/5.jpg" alt="">
+                                <span class="veg text-success mdi mdi-circle"></span>
+                             </div>
+                             <div class="product-body">
+                                <h5>Product Title Here</h5>
+                                <h6><strong><span class="mdi mdi-approval"></span> Available in</strong> - 500 gm</h6>
+                             </div>
+                             <div class="product-footer">
+                                <button type="button" class="btn btn-secondary btn-sm float-right"><i class="mdi mdi-cart-outline"></i> Add To Cart</button>
+                                <p class="offer-price mb-0">$450.99 <i class="mdi mdi-tag-outline"></i><br><span class="regular-price">$800.99</span></p>
+                             </div>
+                          </a>
+                       </div>
+                    </div>
+                    <div class="col-md-4">
+                       <div class="product">
+                          <a href="single.html">
+                             <div class="product-header">
+                                <span class="badge badge-success">50% OFF</span>
+                                <img class="img-fluid" src="assets/img/item/6.jpg" alt="">
+                                <span class="veg text-success mdi mdi-circle"></span>
+                             </div>
+                             <div class="product-body">
+                                <h5>Product Title Here</h5>
+                                <h6><strong><span class="mdi mdi-approval"></span> Available in</strong> - 500 gm</h6>
+                             </div>
+                             <div class="product-footer">
+                                <button type="button" class="btn btn-secondary btn-sm float-right"><i class="mdi mdi-cart-outline"></i> Add To Cart</button>
+                                <p class="offer-price mb-0">$450.99 <i class="mdi mdi-tag-outline"></i><br><span class="regular-price">$800.99</span></p>
+                             </div>
+                          </a>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="row no-gutters">
+                    <div class="col-md-4">
+                       <div class="product">
+                          <a href="single.html">
+                             <div class="product-header">
+                                <span class="badge badge-success">50% OFF</span>
+                                <img class="img-fluid" src="assets/img/item/7.jpg" alt="">
+                                <span class="veg text-success mdi mdi-circle"></span>
+                             </div>
+                             <div class="product-body">
+                                <h5>Product Title Here</h5>
+                                <h6><strong><span class="mdi mdi-approval"></span> Available in</strong> - 500 gm</h6>
+                             </div>
+                             <div class="product-footer">
+                                <button type="button" class="btn btn-secondary btn-sm float-right"><i class="mdi mdi-cart-outline"></i> Add To Cart</button>
+                                <p class="offer-price mb-0">$450.99 <i class="mdi mdi-tag-outline"></i><br><span class="regular-price">$800.99</span></p>
+                             </div>
+                          </a>
+                       </div>
+                    </div>
+                    <div class="col-md-4">
+                       <div class="product">
+                          <a href="single.html">
+                             <div class="product-header">
+                                <span class="badge badge-success">50% OFF</span>
+                                <img class="img-fluid" src="assets/img/item/8.jpg" alt="">
+                                <span class="veg text-success mdi mdi-circle"></span>
+                             </div>
+                             <div class="product-body">
+                                <h5>Product Title Here</h5>
+                                <h6><strong><span class="mdi mdi-approval"></span> Available in</strong> - 500 gm</h6>
+                             </div>
+                             <div class="product-footer">
+                                <button type="button" class="btn btn-secondary btn-sm float-right"><i class="mdi mdi-cart-outline"></i> Add To Cart</button>
+                                <p class="offer-price mb-0">$450.99 <i class="mdi mdi-tag-outline"></i><br><span class="regular-price">$800.99</span></p>
+                             </div>
+                          </a>
+                       </div>
+                    </div>
+                    <div class="col-md-4">
+                       <div class="product">
+                          <a href="single.html">
+                             <div class="product-header">
+                                <span class="badge badge-success">50% OFF</span>
+                                <img class="img-fluid" src="assets/img/item/9.jpg" alt="">
+                                <span class="veg text-success mdi mdi-circle"></span>
+                             </div>
+                             <div class="product-body">
+                                <h5>Product Title Here</h5>
+                                <h6><strong><span class="mdi mdi-approval"></span> Available in</strong> - 500 gm</h6>
+                             </div>
+                             <div class="product-footer">
+                                <button type="button" class="btn btn-secondary btn-sm float-right"><i class="mdi mdi-cart-outline"></i> Add To Cart</button>
+                                <p class="offer-price mb-0">$450.99 <i class="mdi mdi-tag-outline"></i><br><span class="regular-price">$800.99</span></p>
+                             </div>
+                          </a>
+                       </div>
+                    </div>
+                 </div>
+                 <nav>
+                    <ul class="pagination justify-content-center mt-4">
+                       <li class="page-item disabled">
+                          <span class="page-link">Previous</span>
+                       </li>
+                       <li class="page-item"><a class="page-link" href="#">1</a></li>
+                       <li class="page-item active">
+                          <span class="page-link">
+                          2
+                          <span class="sr-only">(current)</span>
+                          </span>
+                       </li>
+                       <li class="page-item"><a class="page-link" href="#">3</a></li>
+                       <li class="page-item">
+                          <a class="page-link" href="#">Next</a>
+                       </li>
+                    </ul>
+                 </nav>
+              </div>
+           </div>
+        </div>
+     </section>
+     <!------Main Section------>
+
+     <!------Footer------>
+     <section class="section-padding footer bg-white border-top">
+        <div class="container">
+           <div class="row">
+              <div class="col-lg-3 col-md-3">
+                 <h4 class="mb-5 mt-0"><a class="logo" href="index-2.html"><img src="assets/img/logo-footer.png" alt="Osahan Grocery"></a></h4>
+                 <p class="mb-0"><a class="text-dark" href="#"><i class="mdi mdi-phone"></i> +61 525 240 310</a></p>
+                 <p class="mb-0"><a class="text-dark" href="#"><i class="mdi mdi-cellphone-iphone"></i> 12345 67890, 56847-98562</a></p>
+                 <p class="mb-0"><a class="text-success" href="#"><i class="mdi mdi-email"></i> your@gmail.com</a></p>
+                 <p class="mb-0"><a class="text-primary" href="#"><i class="mdi mdi-web"></i> www.alpgrocers.com</a></p>
+              </div>
+              <div class="col-lg-2 col-md-2">
+                 <h6 class="mb-4">TOP CITIES </h6>
+                 <ul>
+                 <li><a href="#" class="footer-a">New Delhi</a></li>
+                 <li><a href="#" class="footer-a">Bengaluru</a></li>
+                 <li><a href="#" class="footer-a">Hyderabad</a></li>
+                 <li><a href="#" class="footer-a">Kolkata</a></li>
+                 <li><a href="#" class="footer-a">Gurugram</a></li>
+                 <ul>
+              </div>
+              <div class="col-lg-2 col-md-2">
+                 <h6 class="mb-4">CATEGORIES</h6>
+                 <ul>
+                 <li><a href="#" class="footer-a">Vegetables</a></li>
+                 <li><a href="#" class="footer-a">Grocery & Staples</a></li>
+                 <li><a href="#" class="footer-a">Breakfast & Dairy</a></li>
+                 <li><a href="#" class="footer-a">Soft Drinks</a></li>
+                 <li><a href="#" class="footer-a">Biscuits & Cookies</a></li>
+                 <ul>
+              </div>
+              <div class="col-lg-2 col-md-2">
+                 <h6 class="mb-4">ABOUT US</h6>
+                 <ul>
+                 <li><a href="#" class="footer-a">Company Information</a></li>
+                 <li><a href="#" class="footer-a">Careers</a></li>
+                 <li><a href="#" class="footer-a">Store Location</a></li>
+                 <li><a href="#" class="footer-a">Affillate Program</a></li>
+                 <li><a href="#" class="footer-a">Copyright</a></li>
+                 <ul>
+              </div>
+              <div class="col-lg-3 col-md-3">
+                 <h6 class="mb-4">Download App</h6>
+                 <div class="app">
+                    <a href="#"><img src="assets/img/google.png" alt=""></a>
+                    <a href="#"><img src="assets/img/apple.png" alt=""></a>
+                 </div>
+                 <h6 class="mb-3 mt-4">GET IN TOUCH</h6>
+                 <div class="footer-social">
+                    <a class="btn-facebook" href="#"><i class="mdi mdi-facebook"></i></a>
+                    <a class="btn-twitter" href="#"><i class="mdi mdi-twitter"></i></a>
+                    <a class="btn-instagram" href="#"><i class="mdi mdi-instagram"></i></a>
+                    <a class="btn-whatsapp" href="#"><i class="mdi mdi-whatsapp"></i></a>
+                    <a class="btn-messenger" href="#"><i class="mdi mdi-facebook-messenger"></i></a>
+                    <a class="btn-google" href="#"><i class="mdi mdi-google"></i></a>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </section>
+     <section class="pt-4 pb-4 footer-bottom" style="background-color: #1c2224;">
+        <div class="container">
+           <div class="row no-gutters">
+              <div class="col-lg-6 col-sm-6">
+                 <p class="mt-1 mb-0">&copy; Copyright 2020 <strong class="text-white">ALP Grocers</strong>. All Rights Reserved<br>
+                 </p>
+              </div>
+              <div class="col-lg-6 col-sm-6 text-right">
+                 <img alt="osahan logo" src="assets/img/payment_methods.png">
+              </div>
+           </div>
+        </div>
+     </section>
+     <!------Footer------>
+     <div class="cart-sidebar">
+        <div class="cart-sidebar-header">
+           <h5>
+              My Cart <span class="text-success">(5 item)</span> <a data-toggle="offcanvas" class="float-right" href="#"><i class="mdi mdi-close"></i>
+              </a>
+           </h5>
+        </div>
+        <div class="cart-sidebar-body">
+           <div class="cart-list-product">
+              <a class="float-right remove-cart" href="#"><i class="mdi mdi-close"></i></a>
+              <img class="img-fluid" src="assets/img/item/11.jpg" alt="">
+              <span class="badge badge-success">50% OFF</span>
+              <h5><a href="#">Product Title Here</a></h5>
+              <h6><strong><span class="mdi mdi-approval"></span> Available in</strong> - 500 gm</h6>
+              <p class="offer-price mb-0">$450.99 <i class="mdi mdi-tag-outline"></i> <span class="regular-price">$800.99</span></p>
+           </div>
+           <div class="cart-list-product">
+              <a class="float-right remove-cart" href="#"><i class="mdi mdi-close"></i></a>
+              <img class="img-fluid" src="assets/img/item/7.jpg" alt="">
+              <span class="badge badge-success">50% OFF</span>
+              <h5><a href="#">Product Title Here</a></h5>
+              <h6><strong><span class="mdi mdi-approval"></span> Available in</strong> - 500 gm</h6>
+              <p class="offer-price mb-0">$450.99 <i class="mdi mdi-tag-outline"></i> <span class="regular-price">$800.99</span></p>
+           </div>
+           <div class="cart-list-product">
+              <a class="float-right remove-cart" href="#"><i class="mdi mdi-close"></i></a>
+              <img class="img-fluid" src="assets/img/item/9.jpg" alt="">
+              <span class="badge badge-success">50% OFF</span>
+              <h5><a href="#">Product Title Here</a></h5>
+              <h6><strong><span class="mdi mdi-approval"></span> Available in</strong> - 500 gm</h6>
+              <p class="offer-price mb-0">$450.99 <i class="mdi mdi-tag-outline"></i> <span class="regular-price">$800.99</span></p>
+           </div>
+           <div class="cart-list-product">
+              <a class="float-right remove-cart" href="#"><i class="mdi mdi-close"></i></a>
+              <img class="img-fluid" src="assets/img/item/1.jpg" alt="">
+              <span class="badge badge-success">50% OFF</span>
+              <h5><a href="#">Product Title Here</a></h5>
+              <h6><strong><span class="mdi mdi-approval"></span> Available in</strong> - 500 gm</h6>
+              <p class="offer-price mb-0">$450.99 <i class="mdi mdi-tag-outline"></i> <span class="regular-price">$800.99</span></p>
+           </div>
+           <div class="cart-list-product">
+              <a class="float-right remove-cart" href="#"><i class="mdi mdi-close"></i></a>
+              <img class="img-fluid" src="assets/img/item/2.jpg" alt="">
+              <span class="badge badge-success">50% OFF</span>
+              <h5><a href="#">Product Title Here</a></h5>
+              <h6><strong><span class="mdi mdi-approval"></span> Available in</strong> - 500 gm</h6>
+              <p class="offer-price mb-0">$450.99 <i class="mdi mdi-tag-outline"></i> <span class="regular-price">$800.99</span></p>
+           </div>
+        </div>
+        <div class="cart-sidebar-footer">
+           <div class="cart-store-details">
+              <p>Sub Total <strong class="float-right">$900.69</strong></p>
+              <p>Delivery Charges <strong class="float-right text-danger">+ $29.69</strong></p>
+              <h6>Your total savings <strong class="float-right text-danger">$55 (42.31%)</strong></h6>
+           </div>
+           <a href="checkout.html"><button class="btn btn-secondary btn-lg btn-block text-left" type="button"><span class="float-left"><i class="mdi mdi-cart-outline"></i> Proceed to Checkout </span><span class="float-right"><strong>$1200.69</strong> <span class="mdi mdi-chevron-right"></span></span></button></a>
+        </div>
+     </div>
+
+    <!------Script tags------>
+    <script data-cfasync="false" src="scripts/cloudflare-static/email-decode.min.js"></script>
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/select2/js/select2.min.js"></script>
+    <script src="assets/vendor/owl-carousel/owl.carousel.js"></script>
+    <script src="assets/js/custom.min.js"></script>
+    <script src="scripts/cloudflare-static/rocket-loader.min.js" data-cf-settings="a9b094da1beb96f5afd80dc8-|49"></script>
+    <script src="static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"rayId":"6a39247388d028c0","version":"2021.10.0","r":1,"token":"dd471ab1978346bbb991feaa79e6ce5c","si":100}'></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120909275-1" type="a9b094da1beb96f5afd80dc8-text/javascript"></script>
+    <script type="a9b094da1beb96f5afd80dc8-text/javascript">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'UA-120909275-1');
+     </script>
+    <!------Script tags------>
+</body>
+</html>
